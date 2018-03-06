@@ -12,7 +12,6 @@ html, body{
   
   #container{
     margin:2.5% auto;
-    background-image: url(imgages/startrekbg.png);
     width:960px;
     height: 95%;
     box-sizing: border-box;
@@ -20,6 +19,8 @@ html, body{
   
   #sub-container{
     position: relative;
+    background-color: rgb(217, 224, 176);
+    opacity: .9;
   }
   button{
     display:block;
@@ -40,13 +41,14 @@ html, body{
     font-family: 'Aclonica', sans-serif;
     font-size: 6.5em;
     font-weight: bold;
-    color:rgb(230, 226, 39);
+    color:rgb(58, 39, 230);
     padding-top: 2.5%;
   }
   
   h2{
     font-size: 35px;
     margin-bottom: 25px;
+    color: rgb(58, 39, 230);
   }
   
   h3{
@@ -56,8 +58,8 @@ html, body{
   
   #start{
     margin-top: 10%;
-    border:2px solid blue;
-    background: rgb(230, 226, 39);
+
+
   }
   
   

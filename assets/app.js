@@ -54,22 +54,22 @@ var questions = [{
   question: 'In Star Trek: The Motion Picture, what is the name of the Federation listening post commanded by Commander Branch?',
   answers: ["Sigma IX", "Epsilon IX", "Gamma V", "Delta X"],
   correctAnswer: "Epsilon IX",
-  image:"assets/images/lionking.gif"
+  image:"assets/images/epsilonIX.png"
 }, {
   question: 'Which character in Star Trek: The Motion Picture, is a science officer for the Enterprise?',
   answers: ["Commander Shalim", "Commander Wyatt", "Commander Flynn", "Commander Sonak"],
   correctAnswer: "Commander Sonak",
-  image:"assets/images/fresh.gif"
+  image:"assets/images/sonak.png"
 }, {
-  question: "What was Doug's best friend's name?",
-  answers: ["Skeeter", "Mark", "Zach", "Cody"],
-  correctAnswer: "Skeeter",
-  image:"assets/images/skeeter.gif"
+  question: "At the beginning of Star Trek: The Motion Picture, Captain Kirk is on his way to a meeting with which admiral?",
+  answers: ["Stamos", "Crosby", "Ryan", "Nogura"],
+  correctAnswer: "Nogura",
+  image:"assets/images/nogura.png"
 }, {
-  question: "What was the name of the principal at Bayside High in Saved By The Bell?",
-  answers: ["Mr.Zhou", "Mr.Driggers", "Mr.Belding", "Mr.Page"],
-  correctAnswer: "Mr.Belding",
-  image:"assets/images/belding.gif"
+  question: "Before resuming command of the Enterprise in Star Trek: The Motion Picture, Kirk served as Chief in what position?",
+  answers: ["Starfleet Operations", "Starfleet Research", "Starfleet Intelligence", "Starfleet Recruitment"],
+  correctAnswer: "Starfleet Operations",
+  image:"assets/images/operations.png"
 }];
 
 
