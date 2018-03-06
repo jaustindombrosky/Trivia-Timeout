@@ -18,7 +18,7 @@ $(document).on('click', '.answer-button', function(e) {
 });
 
 $(document).on('click', '#start', function(e) {
-  $('#subwrapper').prepend('<h2>Time Remaining: <span id="counter-number">30</span> Seconds</h2>');
+  $('#sub-container').prepend('<h2>Time Remaining: <span id="counter-number">30</span> Seconds</h2>');
   game.loadQuestion();
 });
 
@@ -34,31 +34,31 @@ var questions = [{
   question: "In Star Trek: The Motion Picture, a strange destructive cloud is on a course for which planet?",
   answers: ["Earth", "Archimedes", "Megatron", "Alteron"],
   correctAnswer: "Earth",
-  image:"assets/images/toystory.gif"
+  image:"assets/images/earth.png"
 }, {
-  question: "Which of these is NOT a name of one of the Spice Girls?",
-  answers: ["Sporty Spice", "Fred Spice", "Scary Spice", "Posh Spice"],
-  correctAnswer: "Fred Spice",
-  image:"assets/images/spicegirls.gif"
+  question: "In Star Trek, Spock debates whether to participate in which ritual?",
+  answers: ["Kali-Fi", "Pon Farr", "Kolinahr", "Kan-Telan"],
+  correctAnswer: "Kolinahr",
+  image:"assets/images/kolinahr.png"
 }, {
-  question: "Which NBA team won the most titles in the 90s?",
-  answers: ["New York Knicks", "Portland Trailblazers", "Los Angeles Lakers", "Chicago Bulls"],
-  correctAnswer: "Chicago Bulls",
-  image:"assets/images/bulls.gif"
+  question: "Which character in Star Trek comes up with a plan to hide the Enterprise in the gravity field of the planet Titan?",
+  answers: ["Kirk", "Chekov", "Sulu", "Spock"],
+  correctAnswer: "Chekov",
+  image:"assets/images/chekov.png"
 }, {
-  question: 'Which group released the hit song, "Smells Like Teen Spirit"?',
-  answers: ["Nirvana", "Backstreet Boys", "The Offspring", "No Doubt"],
-  correctAnswer: "Nirvana",
-  image:"assets/images/nirvanabark.gif"
+  question: 'Which Character in Star Trek is initially assigned to the USS Farragut instead of the Enterprise?',
+  answers: ["McCoy", "Uhura", "Spock", "Kirk"],
+  correctAnswer: "Uhura",
+  image:"assets/images/uhura.png"
 }, {
-  question: 'Which popular Disney movie featured the song, "Circle of Life"?',
-  answers: ["Aladdin", "Hercules", "Mulan", "The Lion King"],
-  correctAnswer: "The Lion King",
+  question: 'In Star Trek: The Motion Picture, what is the name of the Federation listening post commanded by Commander Branch?',
+  answers: ["Sigma IX", "Epsilon IX", "Gamma V", "Delta X"],
+  correctAnswer: "Epsilon IX",
   image:"assets/images/lionking.gif"
 }, {
-  question: 'Finish this line from the Fresh Prince of Bel-Air theme song: "I whistled for a cab and when it came near, the license plate said..."',
-  answers: ["Dice", "Mirror", "Fresh", "Cab"],
-  correctAnswer: "Fresh",
+  question: 'Which character in Star Trek: The Motion Picture, is a science officer for the Enterprise?',
+  answers: ["Commander Shalim", "Commander Wyatt", "Commander Flynn", "Commander Sonak"],
+  correctAnswer: "Commander Sonak",
   image:"assets/images/fresh.gif"
 }, {
   question: "What was Doug's best friend's name?",
@@ -120,7 +120,7 @@ var game = {
   results: function() {
     clearInterval(timer);
 
-    panel.html('<h2>All done, heres how you did!</h2>');
+    panel.html('<h2>Your Results!</h2>');
     $('#counter-number').html(game.counter);
     panel.append('<h3>Correct Answers: ' + game.correct + '</h3>');
     panel.append('<h3>Incorrect Answers: ' + game.incorrect + '</h3>');
@@ -137,9 +137,9 @@ var game = {
     }
   },
   answeredIncorrectly: function() {
-    game.incorrect++;
+    game.incorrect++;ß
     clearInterval(timer);
-    panel.html('<h2>Nope!</h2>');
+    panel.html('<h2>Fail!</h2>');
     panel.append('<h3>The Correct Answer was: ' + questions[game.currentQuestion].correctAnswer + '</h3>');
     panel.append('<img src="' + questions[game.currentQuestion].image + '" />');
 
@@ -152,7 +152,7 @@ var game = {
   answeredCorrectly: function(){
     clearInterval(timer);
     game.correct++;
-    panel.html('<h2>Correct!</h2>');
+    panel.html('<h2>Win!</h2>');
     panel.append('<img src="' + questions[game.currentQuestion].image + '" />');
 
     if (game.currentQuestion === questions.length - 1){

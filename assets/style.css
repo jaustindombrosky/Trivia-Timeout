@@ -10,7 +10,7 @@ html, body{
   
   }
   
-  #wrapper{
+  #container{
     margin:2.5% auto;
     background-image: url(imgages/startrekbg.png);
     width:960px;
@@ -18,7 +18,7 @@ html, body{
     box-sizing: border-box;
   }
   
-  #subwrapper{
+  #sub-container{
     position: relative;
   }
   button{
